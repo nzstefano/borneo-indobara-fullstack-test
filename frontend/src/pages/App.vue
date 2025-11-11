@@ -1,15 +1,18 @@
 <template>
-  <div style="padding:24px;max-width:900px;margin:0 auto;">
-    <header style="display:flex;gap:12px;align-items:center;margin-bottom:16px;">
-      <h1 style="font-size:20px;margin:0;">Borneo Test</h1>
-      <nav style="display:flex;gap:8px;margin-left:auto;">
-        <router-link to="/">Home</router-link>
-        <router-link to="/dashboard">Dashboard</router-link>
-        <router-link to="/todos">Todos</router-link>
-        <router-link to="/login">Login</router-link>
-      </nav>
-    </header>
-    <router-view />
+  <div class="min-h-screen bg-slate-50 text-slate-900">
+    <Navbar />
+
+    <main class="mx-auto max-w-5xl px-4 py-6">
+      <RouterView />
+    </main>
   </div>
 </template>
-<script setup></script>
+
+<script setup>
+import { RouterView } from "vue-router";
+import { onMounted } from "vue";
+import Navbar from "@components/Navbar.vue";
+import { fetchMe } from "@lib/auth";
+
+onMounted(fetchMe);
+</script>
