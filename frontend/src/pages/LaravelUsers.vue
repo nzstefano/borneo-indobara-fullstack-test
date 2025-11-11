@@ -42,7 +42,8 @@ import axios from "axios";
 import { ref, onMounted } from "vue";
 
 // point this to your laravel url/port
-const API = "http://127.0.0.1:8081/api/users";
+const BASE_API = import.meta.env.VITE_LARAVEL_BASE;
+const API = `${BASE_API}/api/users`;
 
 const page = ref(1);
 const rows = ref([]);
