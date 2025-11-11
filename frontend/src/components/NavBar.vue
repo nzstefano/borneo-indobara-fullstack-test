@@ -64,6 +64,9 @@
         <RouterLink v-else class="hover:text-indigo-600" to="/login"
           >Login</RouterLink
         >
+        <RouterLink class="hover:text-indigo-600" to="/laravel-users"
+          >Laravel Users</RouterLink
+        >
       </nav>
     </div>
   </header>

@@ -4,6 +4,8 @@ import Todos from "@pages/Todos.vue";
 import Logs from "@pages/Logs.vue";
 import Login from "@pages/Login.vue";
 import Register from "@pages/Register.vue";
+import LaravelUsers from "@pages/LaravelUsers.vue";
+
 import { authState, fetchMe, isAuthed } from "@lib/auth";
 
 const router = createRouter({
@@ -20,6 +22,7 @@ const router = createRouter({
       component: Register,
       meta: { public: true },
     },
+    { path: "/laravel-users", component: LaravelUsers, meta: { public: true } },
   ],
 });
 
