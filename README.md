@@ -68,7 +68,8 @@ Endpoints:
 ```bash
 cd frontend
 cp .env.example .env
-yarn && yarn dev               # http://localhost:5173
+yarn && yarn dev
+# http://localhost:5173
 ```
 
 ### Laravel API (optional)
