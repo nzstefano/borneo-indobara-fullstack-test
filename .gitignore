@@ -8,5 +8,4 @@ dist
 vendor
 storage/*.key
 public/storage
-.env.*
 *.local
